@@ -1,19 +1,10 @@
 class ImageCarousel {
   constructor(node) {
     this.parent = node;
-    this.indexDisplay = this.createIndexDisplay();
     this.imageNodes = [...node.querySelectorAll('img')];
     this.indexes = this.imageNodes.length - 1;
     this.currentIndex = 0;
     this.updateDisplay();
-
-  }
-
-  createIndexDisplay() {
-    const indexDisplay = document.createElement('p');
-    indexDisplay.classList.add('absolute')
-    this.parent.prepend(indexDisplay);
-    return indexDisplay;
   }
 
   hideAllImages() {
